@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: NUGET_API_KEY
     steps:
       - uses: actions/checkout@v3
 
