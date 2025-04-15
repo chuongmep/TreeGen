@@ -2,12 +2,15 @@
 using System.CommandLine.Builder;
 using System.CommandLine.Help;
 using System.CommandLine.Parsing;
+using System.Reflection;
 
 namespace TreeGen;
 
 public class Cli
 {
-    private const string Version = "1.0.0";
+    // get ver from assembly
+    private static readonly string Version = Assembly.GetExecutingAssembly()
+        .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown";
 
     public static (string rootDir, bool dirOnly, string? outputFile, bool showVersion, bool showHelp) ParseArguments(string[] args)
     {
