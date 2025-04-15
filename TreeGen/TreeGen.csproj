@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>TreeGen</AssemblyName>
+        <RootNamespace>TreeGen</RootNamespace>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>treegen</ToolCommandName>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+        <PackageId>TreeGen</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>YourName</Authors>
+        <Description>A CLI tool to generate directory trees, inspired by rptree.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/your-username/TreeGen</RepositoryUrl>
+        <PackageTags>cli;directory-tree;dotnet;treegen</PackageTags>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    </ItemGroup>
+</Project>
